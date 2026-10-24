@@ -196,7 +196,7 @@ table.t tr.hl td { background: var(--hl); }
     <h1 class="title" style="top:300px"><span class="ln"><span data-in="8" data-fx="mask">一條規則，</span></span><span class="ln"><span data-in="16" data-fx="mask" class="o">沒有調參</span></span></h1>
     <div class="hero-num" style="bottom:110px">
         <div class="v" style="font-size:220px" data-count="0.12" data-d="2" data-at="30" data-len="60" data-suf="<small>%</small>">0</div>
-        <div class="c" data-in="60">切換門檻＝賣出 ETF 的單邊成本，由成本決定、不在資料上最佳化</div>
+        <div class="c" data-in="60">切換門檻 θ＝ETF 買、賣單邊成本的平均（買 0.073%、賣 0.173%），由成本決定、不在資料上最佳化</div>
     </div>
 </section>
 
@@ -209,7 +209,7 @@ table.t tr.hl td { background: var(--hl); }
         <div class="row3" data-in="22"><div class="k">加強版 A　正價差套利<small>試過：增量 ≈ 0</small></div><div class="d">期貨偏貴時反過來做：借錢多買現貨、空台指期；部位依偏離程度，最多 30%</div><div class="p muted">未採用</div></div>
         <div class="row3" data-in="30"><div class="k">加強版 B　半凱利風控<small>試過：用報酬換回撤</small></div><div class="d">L＝½·μ／σ̂²，限 0.5–1.5 倍；兩根跌停（−20%）損失 ≤ 30% → L ≤ 1.5；減碼用偏貴的期貨</div><div class="p muted">選配</div></div>
     </div></div>
-    <div class="src" data-in="120" data-fx="fade">D 日（結算前一交易日）收盤後計算訊號，避開期貨 13:45／現貨 13:30 收盤時間差；e 日以最後結算價結算舊契約、收盤建立新契約。</div>
+    <div class="src" data-in="120" data-fx="fade">註：g＝每月期望超額（便宜程度 mis ÷ 契約剩餘月數）；θ＝切換門檻 0.12%／月（ETF 買、賣單邊成本的平均：買 0.073%、賣 0.173%）。<br>D 日（結算前一交易日）收盤後計算訊號，避開期貨 13:45／現貨 13:30 收盤時間差；e 日以最後結算價結算舊契約、收盤建立新契約。</div>
 </div>
 <div class="crumb">II · 核心規則與加強版</div>
 </section>
@@ -242,7 +242,7 @@ table.t tr.hl td { background: var(--hl); }
         <svg id="excSvg" viewBox="0 0 1010 600" style="width:1010px;height:600px;overflow:visible"></svg>
         <svg id="qSvg" viewBox="0 0 600 600" style="width:600px;height:600px;overflow:visible"></svg>
     </div>
-    <div class="src" data-in="170" data-fx="fade">左：相對加權報酬指數的累積超額（比率）；右：226 次月決策依事前 g 分四組，下一期「期貨＋現金」相對報酬指數的平均超額。</div>
+    <div class="src" data-in="170" data-fx="fade">左：相對加權報酬指數的累積超額（比率）；右：226 次月決策依事前 g 分四組，下一期「期貨＋現金」相對報酬指數的平均超額。<br>註：g＝每月期望超額（便宜程度 mis ÷ 契約剩餘月數）；θ＝切換門檻 0.12%／月（ETF 買、賣單邊成本的平均：買 0.073%、賣 0.173%）。</div>
 </div>
 <div class="crumb">III · 訊號</div>
 </section>
@@ -355,7 +355,7 @@ table.t tr.hl td { background: var(--hl); }
         <div data-in="26"><div class="lbl">檢討假說　<span class="tag wait">已觸發</span></div><div class="stmt">投信淨部位 12 個月平均由負轉正<span class="s">2018–23 年都是負的，2024 年轉正（2026 年 +5.4 萬口）→ 第 15 頁就是這次檢討：規則能自保、但不再賺錢</span></div></div>
         <div data-in="32"><div class="lbl">停止維運／優勢恢復</div><div class="stmt">連續 12 次決策都沒轉進期貨就停<span class="s">目前最近 12 次有 2 次持有期貨（2025/10、2026/08），未觸發；投信 12 個月平均轉回負值，或連續 3 個月 g ＞ θ，視為優勢恢復</span></div></div>
     </div></div>
-    <div class="src" data-in="120" data-fx="fade">執行面：成交價差 > 3 點或月追蹤誤差 > 2% 即暫停；198 口大台＝日均量 0.2%。個人投資人稅後版超額升到 +3.80%；0050 版本受指數差影響，測試期轉負。</div>
+    <div class="src" data-in="120" data-fx="fade">註：g＝每月期望超額（便宜程度 mis ÷ 契約剩餘月數）；θ＝切換門檻 0.12%／月（ETF 買、賣單邊成本的平均：買 0.073%、賣 0.173%）。<br>執行面：成交價差 > 3 點或月追蹤誤差 > 2% 即暫停；198 口大台＝日均量 0.2%。個人投資人稅後版超額升到 +3.80%；0050 版本受指數差影響，測試期轉負。</div>
 </div>
 <div class="crumb">IV · 決策</div>
 </section>
