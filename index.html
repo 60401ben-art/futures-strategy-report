@@ -326,9 +326,8 @@ table.t tr.hl td { background: var(--hl); }
     <div class="body" style="display:grid;grid-template-columns:1.35fr 1fr;gap:60px">
         <svg id="robSvg" viewBox="0 0 920 600" style="width:920px;height:600px;overflow:visible"></svg>
         <div style="display:flex;flex-direction:column;justify-content:center;gap:40px">
-            <div class="kpi" data-in="40"><div class="v hero-c" id="r1"></div><div class="c">全期超額 bootstrap 90% 信賴區間（區塊 6 個月、5,000 次）</div></div>
-            <div class="kpi" data-in="50"><div class="v" id="r2"></div><div class="c">Deflated Sharpe：資訊比率 <span id="r2b"></span> 在嘗試 50 組後仍「不是運氣」的機率</div></div>
-            <p class="note" data-in="60">測試期 90% 區間 <span id="r3"></span> 跨過 0：<b>優勢還在、但變小</b>，單看近 6 年不顯著。</p>
+            <div class="kpi" data-in="40"><div class="v hero-c" id="r1" style="font-size:64px;white-space:nowrap"></div><div class="c" style="max-width:none">全期超額 bootstrap 90% 信賴區間<br>（區塊 6 個月、5,000 次）</div></div>
+            <div class="kpi" data-in="50"><div class="v" id="r3" style="font-size:64px;white-space:nowrap"></div><div class="c" style="max-width:none">測試期 90% 區間：<br><b style="color:var(--hero)">優勢還在但變小</b>，單看近 6 年不顯著。</div></div>
         </div>
     </div>
     <div class="src" data-in="160" data-fx="fade">核心規則年化超額（相對報酬指數）；成本情境把稅、手續費、滑價全部放大；延遲＝訊號晚 1 個交易日取得。</div>
@@ -355,9 +354,9 @@ table.t tr.hl td { background: var(--hl); }
 <div class="wrap">
     <h2 class="h2" data-in="4">決策：只做模擬交易，<i>假說的檢討條件已經觸發</i></h2>
     <div class="body"><div class="pairs">
-        <div data-in="14"><div class="lbl">核心規則　<span class="tag pass">通過</span></div><div class="stmt">2026/11–2027/04 模擬交易<span class="s">每月記錄訊號、成交價與追蹤誤差</span></div></div>
-        <div data-in="20"><div class="lbl">加強版　<span class="tag wait">未採用</span></div><div class="stmt">每年只多 0.02%，不值得借錢<span class="s">等期貨長期偏貴（正價差期）、且融資利差低於 2% 時再評估</span></div></div>
-        <div data-in="26"><div class="lbl">檢討假說　<span class="tag wait">已觸發</span></div><div class="stmt">投信淨部位 12 個月平均由負轉正<span class="s">2018–23 年都是負的，2024 年轉正（2026 年 +5.4 萬口）→ 第 14 頁就是這次檢討：規則能自保、但不再賺錢</span></div></div>
+        <div data-in="14"><div class="lbl">核心規則　<span class="tag pass">通過</span></div><div class="stmt">2026/11–2027/04 模擬交易<span class="s">預計將打算追蹤接下來半年的資料去做模擬交易<br>(不過近期此策略日漸失去利潤)</span></div></div>
+        <div data-in="20"><div class="lbl">加強版　<span class="tag wait">未採用</span></div><div class="stmt">調整後都沒贏過核心規則<span class="s">只在正價差期再評估，但借錢（融資）成本過高</span></div></div>
+        <div data-in="26"><div class="lbl">檢討假說　<span class="tag wait">已觸發</span></div><div class="stmt">投信淨部位 12 個月平均由負轉正<span class="s">2018–23 年都是負的，2024 年轉正（2026 年 +5.4 萬口）→ 規則能自保、但不再賺錢</span></div></div>
         <div data-in="32"><div class="lbl">停止維運／優勢恢復</div><div class="stmt">連續 12 次決策都沒轉進期貨就停<span class="s">目前最近 12 次有 2 次持有期貨（2025/10、2026/08），未觸發；投信 12 個月平均轉回負值，或連續 3 個月 g ＞ θ，視為優勢恢復</span></div></div>
     </div></div>
     <div class="src" data-in="120" data-fx="fade">註：g＝每月期望超額（便宜程度 mis ÷ 契約剩餘月數）；θ＝切換門檻 0.12%／月（ETF 買、賣單邊成本的平均：買 0.073%、賣 0.173%）。<br>執行面：成交價差 > 3 點或月追蹤誤差 > 2% 即暫停；198 口大台＝日均量 0.2%。個人投資人稅後版超額升到 +3.80%；0050 版本受指數差影響，測試期轉負。</div>
@@ -368,7 +367,7 @@ table.t tr.hl td { background: var(--hl); }
 <!-- 20 結尾 -->
 <section class="slide cine grain" data-dur="140">
     <h1 class="title" style="font-size:104px;width:1500px;top:190px"><span class="ln"><span data-in="6" data-fx="mask">期貨便宜，就買便宜的那一個。</span></span><span class="ln"><span data-in="14" data-fx="mask" class="o">但折價正在消失。</span></span></h1>
-    <p class="sub" style="top:520px;width:1100px" data-in="30">限制：測試期超額不顯著、數值門檻事後訂定、現金利率以重貼現率近似、法人資料只有 2018 年起。</p>
+    <p class="sub" style="top:520px;width:1100px" data-in="30">限制：測試期超額不顯著、現金利率以重貼現率近似、法人資料只有 2018 年起。</p>
     <div class="hero-num" style="bottom:130px"><div class="v" style="font-size:180px" data-in="40" data-fx="scale">Q&amp;A</div><div class="c" data-in="56">謝謝聆聽</div></div>
     <div class="meta" data-in="60" data-fx="fade">課程作業用途，非投資建議。資料：期交所、證交所、FinMind、央行。</div>
 </section>
@@ -483,7 +482,6 @@ $('e3').textContent = `利差 2% 時每年 ${sg(DATA.l2sens['融資利差 2.0%']
 const RA = DATA.refAF;
 $('wkTake').textContent = `期貨本身的定價優勢：2008–16 每年 ${pc(RA['2008–2016']['參考：一直持有期貨（無成本）'])}，2017–26 ${pc(RA['2017–2026']['參考：一直持有期貨（無成本）'])}，2024–26 變成 ${pc(RA['2024–2026']['參考：一直持有期貨（無成本）'])}；核心規則靠「偏貴就改持現貨」守住，但已經賺不多。`;
 $('r1').textContent = `[${pc(DATA.boot['CI90下']['第 1 層｜全期'], 2, false)}, ${pc(DATA.boot['CI90上']['第 1 層｜全期'], 2, false)}]`;
-$('r2').textContent = DATA.dsr['DSR_資訊比率'][L1].toFixed(3); $('r2b').textContent = DATA.dsr['資訊比率'][L1].toFixed(2);
 $('r3').textContent = `[${pc(DATA.boot['CI90下']['第 1 層｜測試期 2021–2026'])}, ${pc(DATA.boot['CI90上']['第 1 層｜測試期 2021–2026'])}]`;
 
 /* ── 04 拆解橫條 */
